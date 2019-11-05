@@ -20,14 +20,13 @@ __all__ = ['fetch', 'macro']
 ##
 
 VERSION = open(join(dirname(__file__), 'VERSION')).read().strip()
-FIJI_VERSION = '20141125'
-BASE_URL = 'http://fiji.sc/downloads/Life-Line/fiji-'
-END_URL = '-' + FIJI_VERSION + '.zip'
+BASE_URL = 'https://downloads.imagej.net/fiji/latest/fiji-'
+END_URL = '.zip'
 
 HOME = os.path.expanduser('~')
 BIN_FOLDER = join(HOME, '.bin')
 EXTRACT_FOLDER = join(BIN_FOLDER, 'Fiji.app')
-FIJI_ROOT = join(BIN_FOLDER, 'Fiji-' + FIJI_VERSION + '.app')
+FIJI_ROOT = join(BIN_FOLDER, 'Fiji.app')
 BIN_NAMES = {
     'Darwin64bit': join(FIJI_ROOT, 'Contents/MacOS/ImageJ-macosx'),
     'Linux32bit': join(FIJI_ROOT, 'ImageJ-linux32'),
